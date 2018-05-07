@@ -26,13 +26,18 @@ public static Actions act;
 		act.sendKeys(Keys.DOWN).sendKeys(Keys.DOWN).sendKeys(Keys.ENTER).build().perform();
 		//btnSearch_element.click();
 	}
-	public static void addToCart(WebElement itemLink_element, WebElement btnAddToCart_element, WebElement btnAdd_element) throws InterruptedException {
+	public static void itemDetails(WebElement itemLink_element) throws InterruptedException {
 		itemLink_element.click();
-		Thread.sleep(3000);
-		btnAddToCart_element.click();
-		btnAdd_element.click();
-
+		
 	}
+	public static void addToCart(WebElement btnAddToCart_element)
+	{
+		btnAddToCart_element.click();
+	}
+	public static void addWarrenty(WebElement btnAdd_element) {
+		btnAdd_element.click();
+	}
+	
 	public static void quitBrowser(WebDriver driver) {
 		driver.quit();
 

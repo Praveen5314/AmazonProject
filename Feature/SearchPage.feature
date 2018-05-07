@@ -10,6 +10,6 @@ Examples:
 |laptop| 
 |HP laptop|
 |Dell laptop|
-|Apple laptop|
+|Asus laptop|
 |Lenova laptop|
 |Acer Aspire laptop|
