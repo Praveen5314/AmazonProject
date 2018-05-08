@@ -12,18 +12,19 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class StepDefinition extends Base {
-	String cartCount;
+	
 	String parentWindowId;
 	Set<String> allWindowsId;
 	String cartItem;
 	String laptopBrand;
+	int itemCount = 0;
 	
-	@Given("^The user is on Amazon search page$")
-	public void the_user_is_on_Amazon_search_page() {
+	@Given("^The user is on amazon search page$")
+	public void the_user_is_on_amazon_search_page()  {
 	    
 		launchBrowser("https://www.amazon.in/");
 	}
-	@When("^the user search Laptop \"([^\"]*)\"$")
+	@When("^The user search Laptop \"([^\"]*)\"$")
 	public void the_user_search_Laptop(String item) throws InterruptedException  {
 		WebElement showCategory=driver.findElement(By.xpath("//*[@id=\"nav-link-shopall\"]"));
 		Actions mouseOverAcc=new Actions(driver);
@@ -36,7 +37,7 @@ public class StepDefinition extends Base {
 		searchLaptop(txtSearch,item);
 		laptopBrand=item;
 	}
-	@When("^the user add to cart$")
+	@When("^The user add to cart$")
 	public void the_user_add_to_cart() throws Throwable {
 		
 		 WebElement itemLink = driver.findElement(By.xpath("//*[@id=\"result_3\"]/div/div[3]/div[1]/a/h2"));
@@ -52,6 +53,7 @@ public class StepDefinition extends Base {
 			 }
 			 WebElement btnAddToCart = driver.findElement(By.id("add-to-cart-button"));
 			 addToCart(btnAddToCart);
+			 Thread.sleep(2000);
 			 try
 			 {
 				 WebElement btnAdd = driver.findElement(By.id("siAddCoverage-announce"));
@@ -62,9 +64,9 @@ public class StepDefinition extends Base {
 			 {
 				 System.out.println(e);
 			 }
-			 WebElement spnaddCount = driver.findElement(By.id("nav-cart-count"));
-			 cartCount = spnaddCount.getText();
-			 spnaddCount.click();
+			 itemCount++;
+			 WebElement addCart = driver.findElement(By.id("nav-cart"));
+			 addCart.click();
 			 try
 			 {
 				 WebElement itemInCart = driver.findElement(By.xpath("/html/body/div[1]/div[4]/div/div[4]/div/div[2]/div[3]/form/div[2]/div[1]/div[4]/div[2]/div[1]/div/div/div[2]/ul/li[1]/span/a/span"));
@@ -78,35 +80,33 @@ public class StepDefinition extends Base {
 		 }
 		  quitBrowser(driver);
 	}
-	@Then("^the user verifies the laptop in cart$")
+	@Then("^The user verifies the laptop in cart$")
 	public void the_user_verifies_the_laptop_in_cart() {
-	    //Assert.assertEquals("1", cartCount);
-	    if(laptopBrand.contains("HP"))
+	    try
 	    {
-	    Assert.assertTrue(cartItem.contains("HP"));
+	    	switch(itemCount)
+		      {
+			 case 1:
+				 Assert.assertTrue(cartItem.contains("HP"));
+			 case 2:
+				 Assert.assertTrue(cartItem.contains("Dell"));
+			 case 3:
+				 Assert.assertTrue(cartItem.contains("Asus"));
+			 case 4:
+				 Assert.assertTrue(cartItem.contains("Lenova"));
+			 case 5:
+				 Assert.assertTrue(cartItem.contains("Acer"));
+			 default:
+				 Assert.assertTrue(cartItem.isEmpty());
+		      }
+
 	    }
-	    else if(laptopBrand.contains("Dell"))
-	    {
-	    	Assert.assertTrue(cartItem.contains("Dell"));
+	    catch(Exception e) {
+	    	 System.out.println(e);
 	    }
-	    else if(laptopBrand.contains("Acer"))
-	    {
-	    	Assert.assertTrue(cartItem.contains("Acer"));
-	    }
-	    else if(laptopBrand.contains("Lenova"))
-	    {
-	    	Assert.assertTrue(cartItem.contains("Lenova"));
-	    }
-	    else if(laptopBrand.contains("Asus"))
-	    {
-	    	Assert.assertTrue(cartItem.contains("Lenova"));
-	    }
-	    else
-	    {
-	    	Assert.assertTrue(cartItem.isEmpty());
-	    }
-	    
+		 	
 	}
+		 
 
 
 }

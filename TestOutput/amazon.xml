@@ -1,53 +1,77 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite failures="2" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="5" time="161.344297">
-<testcase classname="Amazon shopping Details" name="User verifies Laptop searching and Add to cart" time="29.993565">
-<system-out><![CDATA[Given The user is on Amazon search page.....................................passed
-When the user search Laptop "HP laptop".....................................passed
-And the user add to cart....................................................passed
-Then the user verifies the laptop in cart...................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Amazon shopping Details" name="User verifies Laptop searching and Add to cart 2" time="29.726786">
-<system-out><![CDATA[Given The user is on Amazon search page.....................................passed
-When the user search Laptop "Dell laptop"...................................passed
-And the user add to cart....................................................passed
-Then the user verifies the laptop in cart...................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Amazon shopping Details" name="User verifies Laptop searching and Add to cart 3" time="30.843588">
-<failure message="java.lang.AssertionError&#13;&#10;&#9;at org.junit.Assert.fail(Assert.java:86)&#13;&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:41)&#13;&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:52)&#13;&#10;&#9;at OnlineShopping.Amazon.StepDefinition.the_user_verifies_the_laptop_in_cart(StepDefinition.java:102)&#13;&#10;&#9;at ✽.Then the user verifies the laptop in cart(SearchPage.feature:7)&#13;&#10;"><![CDATA[Given The user is on Amazon search page.....................................passed
-When the user search Laptop "Asus laptop"...................................passed
-And the user add to cart....................................................passed
-Then the user verifies the laptop in cart...................................failed
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="5" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="5" time="152.389308">
+<testcase classname="Amazon shopping details" name="User verifies laptop searching and add to cart" time="30.54744">
+<failure message="java.lang.AssertionError&#13;&#10;&#9;at org.junit.Assert.fail(Assert.java:86)&#13;&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:41)&#13;&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:52)&#13;&#10;&#9;at OnlineShopping.Amazon.StepDefinition.the_user_verifies_the_laptop_in_cart(StepDefinition.java:92)&#13;&#10;&#9;at ✽.Then The user verifies the laptop in cart(SearchPage.feature:7)&#13;&#10;"><![CDATA[Given The user is on amazon search page.....................................passed
+When The user search Laptop "HP laptop".....................................passed
+And The user add to cart....................................................passed
+Then The user verifies the laptop in cart...................................failed
 
 StackTrace:
 java.lang.AssertionError
 	at org.junit.Assert.fail(Assert.java:86)
 	at org.junit.Assert.assertTrue(Assert.java:41)
 	at org.junit.Assert.assertTrue(Assert.java:52)
-	at OnlineShopping.Amazon.StepDefinition.the_user_verifies_the_laptop_in_cart(StepDefinition.java:102)
-	at ✽.Then the user verifies the laptop in cart(SearchPage.feature:7)
+	at OnlineShopping.Amazon.StepDefinition.the_user_verifies_the_laptop_in_cart(StepDefinition.java:92)
+	at ✽.Then The user verifies the laptop in cart(SearchPage.feature:7)
 ]]></failure>
 </testcase>
-<testcase classname="Amazon shopping Details" name="User verifies Laptop searching and Add to cart 4" time="34.859971">
-<failure message="java.lang.AssertionError&#13;&#10;&#9;at org.junit.Assert.fail(Assert.java:86)&#13;&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:41)&#13;&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:52)&#13;&#10;&#9;at OnlineShopping.Amazon.StepDefinition.the_user_verifies_the_laptop_in_cart(StepDefinition.java:98)&#13;&#10;&#9;at ✽.Then the user verifies the laptop in cart(SearchPage.feature:7)&#13;&#10;"><![CDATA[Given The user is on Amazon search page.....................................passed
-When the user search Laptop "Lenova laptop".................................passed
-And the user add to cart....................................................passed
-Then the user verifies the laptop in cart...................................failed
+<testcase classname="Amazon shopping details" name="User verifies laptop searching and add to cart 2" time="29.230885">
+<failure message="java.lang.AssertionError&#13;&#10;&#9;at org.junit.Assert.fail(Assert.java:86)&#13;&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:41)&#13;&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:52)&#13;&#10;&#9;at OnlineShopping.Amazon.StepDefinition.the_user_verifies_the_laptop_in_cart(StepDefinition.java:90)&#13;&#10;&#9;at ✽.Then The user verifies the laptop in cart(SearchPage.feature:7)&#13;&#10;"><![CDATA[Given The user is on amazon search page.....................................passed
+When The user search Laptop "Dell laptop"...................................passed
+And The user add to cart....................................................passed
+Then The user verifies the laptop in cart...................................failed
 
 StackTrace:
 java.lang.AssertionError
 	at org.junit.Assert.fail(Assert.java:86)
 	at org.junit.Assert.assertTrue(Assert.java:41)
 	at org.junit.Assert.assertTrue(Assert.java:52)
-	at OnlineShopping.Amazon.StepDefinition.the_user_verifies_the_laptop_in_cart(StepDefinition.java:98)
-	at ✽.Then the user verifies the laptop in cart(SearchPage.feature:7)
+	at OnlineShopping.Amazon.StepDefinition.the_user_verifies_the_laptop_in_cart(StepDefinition.java:90)
+	at ✽.Then The user verifies the laptop in cart(SearchPage.feature:7)
 ]]></failure>
 </testcase>
-<testcase classname="Amazon shopping Details" name="User verifies Laptop searching and Add to cart 5" time="35.920387">
-<system-out><![CDATA[Given The user is on Amazon search page.....................................passed
-When the user search Laptop "Acer Aspire laptop"............................passed
-And the user add to cart....................................................passed
-Then the user verifies the laptop in cart...................................passed
-]]></system-out>
+<testcase classname="Amazon shopping details" name="User verifies laptop searching and add to cart 3" time="27.862587">
+<failure message="java.lang.AssertionError&#13;&#10;&#9;at org.junit.Assert.fail(Assert.java:86)&#13;&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:41)&#13;&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:52)&#13;&#10;&#9;at OnlineShopping.Amazon.StepDefinition.the_user_verifies_the_laptop_in_cart(StepDefinition.java:90)&#13;&#10;&#9;at ✽.Then The user verifies the laptop in cart(SearchPage.feature:7)&#13;&#10;"><![CDATA[Given The user is on amazon search page.....................................passed
+When The user search Laptop "Asus laptop"...................................passed
+And The user add to cart....................................................passed
+Then The user verifies the laptop in cart...................................failed
+
+StackTrace:
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at OnlineShopping.Amazon.StepDefinition.the_user_verifies_the_laptop_in_cart(StepDefinition.java:90)
+	at ✽.Then The user verifies the laptop in cart(SearchPage.feature:7)
+]]></failure>
+</testcase>
+<testcase classname="Amazon shopping details" name="User verifies laptop searching and add to cart 4" time="32.827134">
+<failure message="java.lang.AssertionError&#13;&#10;&#9;at org.junit.Assert.fail(Assert.java:86)&#13;&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:41)&#13;&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:52)&#13;&#10;&#9;at OnlineShopping.Amazon.StepDefinition.the_user_verifies_the_laptop_in_cart(StepDefinition.java:90)&#13;&#10;&#9;at ✽.Then The user verifies the laptop in cart(SearchPage.feature:7)&#13;&#10;"><![CDATA[Given The user is on amazon search page.....................................passed
+When The user search Laptop "Lenova laptop".................................passed
+And The user add to cart....................................................passed
+Then The user verifies the laptop in cart...................................failed
+
+StackTrace:
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at OnlineShopping.Amazon.StepDefinition.the_user_verifies_the_laptop_in_cart(StepDefinition.java:90)
+	at ✽.Then The user verifies the laptop in cart(SearchPage.feature:7)
+]]></failure>
+</testcase>
+<testcase classname="Amazon shopping details" name="User verifies laptop searching and add to cart 5" time="31.921262">
+<failure message="java.lang.AssertionError&#13;&#10;&#9;at org.junit.Assert.fail(Assert.java:86)&#13;&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:41)&#13;&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:52)&#13;&#10;&#9;at OnlineShopping.Amazon.StepDefinition.the_user_verifies_the_laptop_in_cart(StepDefinition.java:90)&#13;&#10;&#9;at ✽.Then The user verifies the laptop in cart(SearchPage.feature:7)&#13;&#10;"><![CDATA[Given The user is on amazon search page.....................................passed
+When The user search Laptop "Acer Aspire laptop"............................passed
+And The user add to cart....................................................passed
+Then The user verifies the laptop in cart...................................failed
+
+StackTrace:
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at OnlineShopping.Amazon.StepDefinition.the_user_verifies_the_laptop_in_cart(StepDefinition.java:90)
+	at ✽.Then The user verifies the laptop in cart(SearchPage.feature:7)
+]]></failure>
 </testcase>
 </testsuite>

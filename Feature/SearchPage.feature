@@ -1,10 +1,10 @@
-Feature: Amazon shopping Details
+Feature: Amazon shopping details
 
-Scenario Outline: User verifies Laptop searching and Add to cart
-Given The user is on Amazon search page
-When the user search Laptop "<laptop>"
-And the user add to cart  
-Then the user verifies the laptop in cart
+Scenario Outline: User verifies laptop searching and add to cart
+Given The user is on amazon search page
+When The user search Laptop "<laptop>"
+And The user add to cart  
+Then The user verifies the laptop in cart
 
 Examples:
 |laptop| 
