@@ -10,12 +10,14 @@ public class Base {
 
 public static WebDriver driver;
 public static Actions act;
+public static Actions act1;
 	
 	public static WebDriver launchBrowser(String url)
 	{
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Elcot\\eclipse-workspace\\test\\Driver\\chromedriver.exe");
 		driver=new ChromeDriver();
 		driver.get(url);
+		driver.manage().window().maximize();
 		return driver;
 		
 	}
